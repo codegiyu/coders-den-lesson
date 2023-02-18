@@ -132,3 +132,14 @@ console.log(string3 + "Days" + "Of" + "JavaScript")
 
 // Type Coercion
 // Type Conversion
+
+const rep = (str) => {
+    const mirror = {A: "T", T: "A", C: "G", G: "C"}
+    return str.replace(/[ATCG]/g, (char) => mirror[char])
+}
+
+console.log(rep("ATTCBG"))
+
+const fey = [0, 5]
+const fad = ((fey[1] += 8), fey)
+console.log(fad)
