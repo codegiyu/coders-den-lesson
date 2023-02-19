@@ -88,8 +88,8 @@ console.log({"too": 4} == {"too": 4})
 console.log({"too": 4} === {"too": 4})
 
 // Logical Operators - (&&, ||, !, ??)
-console.log(true && "r" && 'null' && [] && {})
-console.log(false || "" || null || 0 || undefined)
+console.log(true && "s" && 'null' && [] && {})
+console.log(false || "t" || null || 0 || undefined)
 console.log(null ?? null ?? 0 ?? null ?? undefined) //not null or not undefined
 console.log(!!"0")
 

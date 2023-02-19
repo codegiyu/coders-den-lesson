@@ -30,6 +30,11 @@ console.log((Math.floor(Math.random() * 10)));;;;;;;;;;;;;;;;; // 10 - 19
 
 // Math.floor(Math.random() * 131) + 20
 
+// 14 - 29 : 0 - 15
+0 - 15
+
+console.log(Math.floor(Math.random() * 16) + 14);;;;;;;;;;;;;;;;;;;;;;
+
 const num = 9.4562
 console.log(num.toExponential())
 console.log((97762).toExponential())
@@ -143,3 +148,7 @@ console.log(rep("ATTCBG"))
 const fey = [0, 5]
 const fad = ((fey[1] += 8), fey)
 console.log(fad)
+
+const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;.'
+console.log(sentence.replaceAll("%", "").replaceAll("@", ""))
+console.log(sentence.replace(/[%$@&#;]/g, ""))
