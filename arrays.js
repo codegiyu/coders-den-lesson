@@ -74,3 +74,16 @@ console.log(numbers.reverse())
 console.log(numbers.sort())
 console.log(numbers.sort((a, b) => a - b))
 console.log(mySplitString.sort((a, b) => b.localeCompare(a)))
+const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+  ]
+  webTechs.push("\"")
+  webTechs.unshift("\"")
+
+console.log(`${webTechs.join(" ")}`)

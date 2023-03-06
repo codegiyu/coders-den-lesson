@@ -99,3 +99,9 @@ today === "Sunday"
     : today === "Wednesday"
     ? console.log("midweek")
     : console.log("Invalid day")
+
+let myArray = ["a", "b", "c"]
+
+myArray = 5 > 6 ? myArray.push("d") : myArray.shift()
+
+console.log(myArray)
