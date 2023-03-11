@@ -15,51 +15,53 @@ for (char; char <= 10; char++) {
 console.log(char)
 
 // // loop to print 5 - 0
-// for (let k = 5; k >= 0; k--) console.log(k)
+for (let k = 5; k >= 0; k--) {
+    console.log(k)
+}
 
-// for (let j = 0; j <= 10; j++) {
-//     if (j === 5) {
-//         continue
-//     }
-//     console.log(j)    
+for (let j = 0; j <= 10; j++) {
+    if (j === 5) {
+        continue
+    }
+    console.log(j)    
+}
+
+for (let j = 0; j <= 10; j++) {
+    if (j === 5) {
+        break
+    }
+    console.log(j)    
+} 
+
+for (let j = 0; j <= 10; j++) {
+    if (j % 2 !== 0 || j === 0) {
+        continue
+    }
+    console.log(j)
+}
+
+for (let y = 7; y <= 5; y++) {
+    console.log(y)
+}
+
+console.log(5%2 !== 0)
+
+
+// While Loop
+
+// initialise variable
+
+// while(condition) {
+//     code here
+
+//     variable change
 // }
+let x = 0
 
-// for (let j = 0; j <= 10; j++) {
-//     if (j === 5) {
-//         break
-//     }
-//     console.log(j)    
-// } 
-
-// for (let j = 0; j <= 10; j++) {
-//     if (j % 2 !== 0 || j === 0) {
-//         continue
-//     }
-//     console.log(j)
-// }
-
-// for (let y = 7; y <= 5; y++) {
-//     console.log(y)
-// }
-
-// console.log(5%2 !== 0)
-
-
-// // While Loop
-
-// // initialise variable
-
-// // while(condition) {
-// //     code here
-
-// //     variable change
-// // }
-// let x = 0
-
-// while (x <= 10) {
-//     console.log(x)
-//     x++
-// }
+while (x <= 10) {
+    console.log(x)
+    x++
+}
 
 let arr4 = [1,2,3,4,5,6,7,8,9,10]
 console.log(arr4.length)
@@ -88,13 +90,12 @@ console.log(arr3)
 
 // For Of Loop
 let fruits = ['Banana', 'orange', 'apple', 'mango', 'corn'];
-
+const capitalFruits = []
 // It works only with strings and arrays
 for (const fruit of fruits) {
-    console.log(fruit.toUpperCase());
-
+    capitalFruits.unshift(fruit.toUpperCase())
 }
-
+console.log(capitalFruits)
 // For In, ForEach, Map and others (just intros)
 
 
@@ -189,3 +190,26 @@ for (let word of cleaned) {
     }
 }
 console.log(maxWord);
+
+
+// Use the webTechs array to create the following array of arrays:
+const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB'
+]
+// [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+console.log([webTechs[1],webTechs[1].length])
+console.log([webTechs])
+let newArray = []
+for (let i = 0; i < webTechs.length; i++) {
+    newArray.push([webTechs[i], webTechs[i].length])
+}
+console.log(newArray)
+
+let emptyArr = [[1, 3], [2, 4]]
+console.log(emptyArr)

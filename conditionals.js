@@ -41,13 +41,16 @@ const time = "evening"
 
 if (today === "Sunday" && time === "evening") {
     console.log("Yay, it's a weekend")
-} else if (today.includes('day')) {
+} 
+else if (today.includes('day')) {
     console.log("Ugh, another week")
-} else if (today === "Wednesday") {
+} 
+else if (today === "Wednesday") {
     console.log("midweek")
-} else {
-    console.log("Invalid day")
-}
+} 
+// {
+//     console.log("Invalid day")
+// }
 
 let num2 = 3;
 
@@ -80,7 +83,7 @@ switch (true) {
 
 // Ternary Operator
 
-const key = 9
+const key = 10
 
 if (key < 10) {
     console.log("less than 10")
@@ -88,8 +91,8 @@ if (key < 10) {
     console.log("not less than 10")
 }
 
-key < 10 || typeof key === 'number'
-    ? console.log("less than 10") 
+key < 10 
+    ? console.log("less than 10")
     : console.log("not less than 10")
 
 today === "Sunday" 
@@ -102,6 +105,6 @@ today === "Sunday"
 
 let myArray = ["a", "b", "c"]
 
-myArray = 5 > 6 ? myArray.push("d") : myArray.shift()
+myArray = 7 > 6 ? myArray.push("d") : myArray.shift()
 
 console.log(myArray)
