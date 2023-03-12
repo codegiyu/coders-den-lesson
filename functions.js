@@ -119,35 +119,56 @@
 // }
 // test()
 // console.log(`a: ${a}, b: ${b}`)
-const name = "Doris", city = "Lagos"
+// const name = "Doris", city = "Lagos"
 
-console.log(window.name)
+// console.log(window.name)
 
-function about() {
-    return `I'm ${name} from ${city}`
-}
-const thisAbout = function() {
-    console.log(this)
-    return `I'm ${this.name} from ${this.city}`
-}
-const object = {
-    name: "Giyu",
-    city: "Abuja"
-}
-// console.log(square(2))
-// console.log(window.square(3))
-console.log(about())
-console.log(about.call(window))
-console.log(window.name)
-console.log(thisAbout())
-console.log(thisAbout.call(object))
+// function about() {
+//     return `I'm ${name} from ${city}`
+// }
+// const thisAbout = function() {
+//     console.log(this)
+//     return `I'm ${this.name} from ${this.city}`
+// }
+// const object = {
+//     name: "Giyu",
+//     city: "Abuja"
+// }
+// // console.log(square(2))
+// // console.log(window.square(3))
+// console.log(about())
+// console.log(about.call(window))
+// console.log(window.name)
+// console.log(thisAbout())
+// console.log(thisAbout.call(object))
 
-function multiply(a, b){
-    a * b
-}
+// function multiply(a, b){
+//     a * b
+// }
 
-const isPrime = () => {
-    return undefined
-}
+const isPrime = (num) => {
+    if (num < 2) return "It is not a prime number"
 
-console.log(isPrime(5))
+    // for (let i = 2; i < num; i++) {
+    //     if (num % i === 0) return "It is not a prime number"
+    // }
+
+    for (let i = 2; i <= num / 2; i++) {
+        if (num % i === 0) return "It is not a prime number"
+    }
+
+    return "It is a prime number"
+}
+console.log(5 % 2)
+console.log(isPrime(10))
+
+
+
+// if ((5 % 2) || (6 % 2 === 0)) {
+//     console.log("yes")
+// }
+// if (5 % 2 === 0) {
+//     console.log("no")
+// }
+
+// 2,3,4,5, 6,7,8,9,10
