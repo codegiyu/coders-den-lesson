@@ -205,6 +205,7 @@ const webTechs = [
 // [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
 console.log([webTechs[1],webTechs[1].length])
 console.log([webTechs])
+
 let newArray = []
 for (let i = 0; i < webTechs.length; i++) {
     newArray.push([webTechs[i], webTechs[i].length])
