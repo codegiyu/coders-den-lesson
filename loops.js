@@ -112,33 +112,38 @@ let furtherCleanSentence = cleanSentence.toLowerCase().replace(/[,.]/g, '')
 
 // Break the Sentence into individual words
 let eachWord = furtherCleanSentence.split(" ")
-
-
 console.log(eachWord);
 
+let wordObj = eachWord.reduce((acc, curr) => {
+    acc[curr] ? acc[curr]++ : acc[curr] = 1
+    return acc
+}, {})
+console.log(wordObj)
+let wordAns = Object.entries(wordObj).reduce((acc, curr) => acc[1] >= curr[1] ? acc : curr)[0]
+console.log(wordAns)
 // Create an array of unique words in the sentence 
-let uniqueWords = [];
-for (const word of eachWord) {
-    if(!uniqueWords.includes(word)){
-        uniqueWords.push(word)
-    }
-}
+// let uniqueWords = [];
+// for (const word of eachWord) {
+//     if(!uniqueWords.includes(word)){
+//         uniqueWords.push(word)
+//     }
+// }
 
-console.log(uniqueWords);
+// console.log(uniqueWords);
 
-//Find out how many times each word appears in the sentence
-let wordCount = [];
-for (let word of uniqueWords) {
-    let count = 0;
-    for (let i = 0; i < eachWord.length; i++) {
-        if(word === eachWord[i]) {
-            count++
-        }
-    }
-    wordCount.push(count);
-}
+// //Find out how many times each word appears in the sentence
+// let wordCount = [];
+// for (let word of uniqueWords) {
+//     let count = 0;
+//     for (let i = 0; i < eachWord.length; i++) {
+//         if(word === eachWord[i]) {
+//             count++
+//         }
+//     }
+//     wordCount.push(count);
+// }
 
-console.log(wordCount);
+// console.log(wordCount);
 
 // Find the highest number and get the associated word
 let highestNumber = Math.max(...wordCount)
@@ -156,7 +161,7 @@ console.log(answer);
 
 
 
-// Paulina's Code
+// Pauline's Code
 /*
 Remove the invalid characters using replace
 then split the words into an array at the spaces
