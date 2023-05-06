@@ -175,14 +175,14 @@ function fibonacci_iterative(n) {
     return fib_n_minus_1;
 }
 //[fib_n_minus_1, fib_n_minus_2] [1, 1], [2, 1], [3, 2], [5, 3]
-console.time('iterative')
-console.log(fibonacci_iterative(-1))
+console.time('iterative');
+console.log(fibonacci_iterative(30))
 console.timeEnd('iterative')
 
 // [0,1]
-// console.time('recursion')
-// console.log(fib(40));;;;;;;
-// console.timeEnd('recursion')
+console.time('recursion')
+console.log(fib(30))
+console.timeEnd('recursion')
 
 function fibronaci(n){
     const fib=[0,1]
