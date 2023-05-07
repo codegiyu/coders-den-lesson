@@ -190,7 +190,7 @@ let n = arr2.length;
 // console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 5))
 // the above code has a logical error because the halfIndex is calculated only once before the while loop starts.
 
-// here is my recommendation
+// here is my recommendation - from Hedonist-altschool
 function binarySearch(arr, n) {
   let array = [...arr];
   let startIndex = 0;
@@ -209,6 +209,27 @@ function binarySearch(arr, n) {
 
   return null;
 }
+
+function newBinarySearch(arr, n){
+    let array = [...arr], itemIndex = 0
+    
+    while (array.length !== 0) {
+        let halfIndex = Math.floor(array.length / 2)
+
+        if (array[halfIndex] === n) {
+            return halfIndex + itemIndex
+        } else if (array[halfIndex] < n) {
+            itemIndex += halfIndex + 1
+            array = array.slice(halfIndex + 1)
+        } else {
+            array = array.slice(0, halfIndex)
+        }
+    }
+
+    return null
+}
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6))
+console.log(newBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6))
 
 // SEARCHING ALGORITHMS
 
