@@ -169,25 +169,46 @@ let n = arr2.length;
 
 // 4. Divide And Conquer 
 
-function binarySearch(arr, n){
-    let array = [...arr]
-    let halfIndex = Math.floor(array.length / 2)
-    console.log(halfIndex)
+// function binarySearch(arr, n){
+//     let array = [...arr]
+//     let halfIndex = Math.floor(array.length / 2)
+//     console.log(halfIndex)
 
-    while (array.length !== 0) {
-        if (array[halfIndex] === n) {
-            return halfIndex
-        } else if (array[halfIndex] < n) {
-            array = array.slice(halfIndex + 1)
-        } else {
-            array = array.slice(0, halfIndex)
-        }
-        console.log(array)
+//     while (array.length !== 0) {
+//         if (array[halfIndex] === n) {
+//             return halfIndex
+//         } else if (array[halfIndex] < n) {
+//             array = array.slice(halfIndex + 1)
+//         } else {
+//             array = array.slice(0, halfIndex)
+//         }
+//         console.log(array)
+//     }
+
+//     return null
+// }
+// console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 5))
+// the above code has a logical error because the halfIndex is calculated only once before the while loop starts.
+
+// here is my recommendation
+function binarySearch(arr, n) {
+  let array = [...arr];
+  let startIndex = 0;
+  let endIndex = array.length - 1;
+  
+  while (startIndex <= endIndex) {
+    let halfIndex = Math.floor((startIndex + endIndex) / 2);
+    if (array[halfIndex] === n) {
+      return halfIndex;
+    } else if (array[halfIndex] < n) {
+      startIndex = halfIndex + 1;
+    } else {
+      endIndex = halfIndex - 1;
     }
+  }
 
-    return null
+  return null;
 }
-console.log(binarySearch([1, 2, 3, 4, 5, 6, 7], 5))
 
 // SEARCHING ALGORITHMS
 
