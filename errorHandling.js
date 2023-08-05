@@ -65,3 +65,7 @@ try {
 } catch (error) {
     console.log(error)
 }
+
+let i = "7"
+++i
+console.log(i)
