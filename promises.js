@@ -24,7 +24,7 @@
 //       }
 //     }, 2000)
 //   })
-  
+
 //   doPromise
 //     .then(result => {
 //       console.log(result)
@@ -68,27 +68,27 @@
 
 // // doSomething()
 
-// const getCountries = async () => {
-//     const url = 'https://restcountries.com/v3.1/all'
-//     // let data = []
+const getCountries = async () => {
+    const url = 'https://restcountries.com/v3.1/all'
+    // let data = []
 
-//     try {
-//         const response = await fetch(url)
+    try {
+        const response = await fetch(url)
 
-//         console.log(response)
-    
-//         const data = await response.json()
-    
-//         console.log(data)  
-//         return data
-//     } catch (error) {
-//         console.log(error.message)
-//     }
+        console.log(response)
 
-// }
+        const data = await response.json()
+
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log(error.message)
+    }
+
+}
 
 // console.log(allCountries)
-// allCountries = await getCountries()
+getCountries()
 // console.log(allCountries)
 // const square = async function (n) {
 //     return n * n
@@ -123,22 +123,22 @@ const randomFailure = new Promise((resolve, reject) => {
     const rando = Math.random()
     console.log(rando)
 
-    rando >= 0.75 
-        ? resolve("Yay, I passed!") 
+    rando >= 0.75
+        ? resolve("Yay, I passed!")
         : reject("Aww, I failed")
 })
 
 randomFailure
-.then(result => console.log(result))
-.catch(cries => console.log(cries))
+    .then(result => console.log(result))
+    .catch(cries => console.log(cries))
 
 const doubleFetch = async () => {
     const url1 = 'https://restcountries.com/v3.1/all'
     const url2 = 'https://jsonplaceholder.typicode.com/posts'
 
-    const [countries, posts] = await Promise.all( [fetch(url1), fetch(url2)] )
+    const [countries, posts] = await Promise.all([fetch(url1), fetch(url2)])
 
-    console.log (countries, posts)
+    console.log(countries, posts)
 
     const [data, data1] = await Promise.all([countries.json(), posts.json()])
 

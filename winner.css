@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page-wrap {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    overflow: hidden;
+
+    & .sidebar {
+        width: 100%;
+        height: 100%;
+        background: blue;
+    }
+
+    & .modal {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(128, 0, 128, 0.7);
+    }
+
+    & .main {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 72px 1fr;
+        padding: 0 24px;
+
+        & .header {
+            width: 100%;
+            height: 100%;
+            background: burlywood;
+        }
+
+        & .main-content {
+            width: 100%;
+            height: calc(100vh - 96px);
+            display: grid;
+            grid-template-rows: 45fr 55fr;
+            gap: 24px;
+            padding: 24px 0;
+
+            & .content-top {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 3fr 2fr;
+                gap: 24px;
+            }
+        }
+    }
+}
+
+.right, .left, .bottom {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    flex: none;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.left-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 17px;
+    display: grid;
+    grid-template-rows: 24px 1fr;
+    gap: 20px;
+
+    & .left-top {
+        width: 100%;
+        height: 100%;
+        background: navajowhite;
+    }
+
+    & .left-content-wrap {
+        width: 100%;
+        height: 100%;
+        background: red;
+        overflow: hidden;
+        flex: none;
+
+        & .left-content {
+            width: 100%;
+            height: 100%;
+            background: yellow;
+            overflow-y: auto;
+
+            & .long-content {
+                width: 100%;
+                height: 310px;
+                background: plum;
+            }
+        }
+    }
+}

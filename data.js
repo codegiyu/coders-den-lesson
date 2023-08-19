@@ -1,4 +1,4 @@
-export const countries2 = [
+export let countries2 = [
     "Nigeria",
     "Ghana"
 ]

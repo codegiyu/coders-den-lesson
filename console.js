@@ -4,6 +4,9 @@ import { countries2 } from "./data.js"
 console.info(rando())
 console.log(countries2)
 
+// countries2 = ["Hello"];
+// console.log(countries2)
+
 console.group("console group")
 console.log('30 Days of JavaScript')
 console.log('%d %s of JavaScript %s', 30, 'Days', "here we come")
